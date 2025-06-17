@@ -1,0 +1,80 @@
+.container-pai{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+    .container-filho1{
+        background-color: gray;
+        width: 80vh;
+        height: 50vh;
+    }
+    
+    .container-filho2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80vh;
+        height: 80vh;
+
+        h1{
+            margin-bottom: 20px;
+        }
+
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+
+            input{
+                width: 400px;
+                height: 48px;
+                border-radius: 8px;
+                border: solid gray 1px;
+                padding-left: 10px;
+            }
+        }
+
+        .botao{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            
+
+            button{
+                width: 410px;
+                height: 48px;
+                border-radius: 10px;
+                border-style: none;
+                font-weight: 700;
+                font-size: 16px;
+
+            }
+
+            button:hover{
+                cursor: pointer;
+                background-color: gray;
+                color: white;
+            }
+
+        }
+
+        .links{
+            display: flex;
+            gap: 10px;
+            margin-top: 26px;
+
+            a{
+                text-decoration: none;
+                
+            }
+        }
+    }
+
+    @media screen and (max-width: 850px){
+        .container-filho1{
+            display: none;
+        }
+    }
+        
+}
