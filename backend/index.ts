@@ -1,5 +1,5 @@
 import express from 'express';
-import {connect} from './db'
+import { connect } from './db'
 import { Connection } from 'mysql2/promise';
 import { UserRepository } from './src/repository/usuario.repository';
 import { PlacaRepository } from './src/repository/placa.repository';
