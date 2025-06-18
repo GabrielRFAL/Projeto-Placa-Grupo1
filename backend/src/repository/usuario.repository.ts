@@ -7,9 +7,10 @@ export class UserRepository{
       const query = "INSERT INTO usuarios(nome, email, senha) VALUES (?,?,?)"
       const values = [user.name, user.email, user.password]
       const [result] = await this.db.query(query,values)
-      user.id = (result as any) 
-      return result
+      user.id = (result as any).insertId
+      return user
     }
+    
     async getAll() {
       const query = "SELECT * FROM usuarios"
       const [users] = await this.db.query(query)
