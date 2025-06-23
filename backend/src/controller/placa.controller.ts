@@ -8,9 +8,9 @@ export class PlacaController implements IGenericControler{
     constructor(public repository: PlacaRepository){}
 
     async create(req: Request, res: Response): Promise<void> {
-        const { id, number, motorista,cargo,funcao_cargo,modelo_veiculo, cor_veiculo   } = req.body;
+        const { id, placa, motorista, cargo, funcao_cargo, modelo_veiculo, cor_veiculo } = req.body;
         const novoPlaca: IPlaca = {
-            id: id, number: number, motorista: motorista, cargo: cargo, funcao_cargo: funcao_cargo, modelo_veiculo: modelo_veiculo, cor_veiculo: cor_veiculo,
+            id: id, placa: placa, motorista: motorista, cargo: cargo, funcao_cargo: funcao_cargo, modelo_veiculo: modelo_veiculo, cor_veiculo: cor_veiculo,
             
         };
         const PlacaCriado = await this.repository.create(novoPlaca);
